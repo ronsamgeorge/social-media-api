@@ -7,6 +7,7 @@ import postRoute from "./routes/posts.js";
 import likeRoute from "./routes/likes.js";
 import commentRoute from "./routes/comments.js";
 import authRoute from "./routes/auth.js";
+import relationshipRoute from "./routes/relationships.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import multer from "multer";
@@ -50,6 +51,7 @@ app.use("/api/posts", postRoute);
 app.use("/api/likes", likeRoute);
 app.use("/api/comments", commentRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/relationships", relationshipRoute);
 
 app.listen(8080, () => {
   console.log("listening on port 8080");
